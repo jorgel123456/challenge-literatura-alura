@@ -155,7 +155,7 @@ public class Principal {
     public void mostrarAutoresVivosPorFecha(){
         System.out.println("Ingrese el año, para saber que Autores se encontraban vivos hasta esa fecha");
         try{
-            int agno = teclado.nextInt();
+            int agno = Integer.valueOf(teclado.nextLine());
             List<Autor> autore = autorRepository.autoresVivosPorFecha(agno);
             if(autore.isEmpty()){
                 System.out.println("No se encontraron registros de autores vivos durante ese año en la base de datos.");
